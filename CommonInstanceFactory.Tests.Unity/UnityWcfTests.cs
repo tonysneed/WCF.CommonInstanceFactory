@@ -25,8 +25,7 @@ namespace CommonInstanceFactory.Tests.Unity
 		public void UnityServiceHost_Should_Use_Soap_GreetingService()
 		{
 			// Arrange
-			ServiceHost serviceHost = new UnityServiceHost<GreetingService>
-				(_container, typeof(GreetingService));
+			ServiceHost serviceHost = new UnityServiceHost<GreetingService>(_container);
 
 			// Act
 			using (var serviceHelper = new InjectedServiceHelper<IGreetingService>
@@ -68,8 +67,7 @@ namespace CommonInstanceFactory.Tests.Unity
 		public void UnityServiceHost_Should_Use_Rest_GreetingService()
 		{
 			// Arrange
-			ServiceHost serviceHost = new UnityServiceHost<GreetingService>
-				(_container, typeof(GreetingService));
+			ServiceHost serviceHost = new UnityServiceHost<GreetingService>(_container);
 			using (var serviceHelper = new InjectedServiceHelper<IGreetingService>
 				(serviceHost, ServiceAddress, new WebHttpBinding()))
 			{

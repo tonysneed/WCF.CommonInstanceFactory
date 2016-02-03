@@ -56,15 +56,15 @@ namespace CommonInstanceFactory.Sample.Hosting.Console
             {
                 case ContainerType.Ninject:
                     serviceHost = new NinjectServiceHost<GreetingService>
-                        (CreateNinjectContainer(), typeof(GreetingService), serviceBaseAddress);
+                        (CreateNinjectContainer(), serviceBaseAddress);
                     break;
                 case ContainerType.SimpleInjector:
                     serviceHost = new SimpleInjectorServiceHost<GreetingService>
-                        (CreateSimpleInjectorContainer(), typeof(GreetingService), serviceBaseAddress);
+                        (CreateSimpleInjectorContainer(), serviceBaseAddress);
                     break;
                 case ContainerType.Unity:
                     serviceHost = new UnityServiceHost<GreetingService>
-                        (CreateUnityContainer(), typeof(GreetingService), serviceBaseAddress);
+                        (CreateUnityContainer(), serviceBaseAddress);
                     break;
                 default:
                     System.Console.WriteLine("Unsupported container: " + containerType);
