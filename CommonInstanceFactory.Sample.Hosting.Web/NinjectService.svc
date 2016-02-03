@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Factory="CommonInstanceFactory.Sample.Hosting.Web.ServiceHostFactories.NinjectServiceHostFactory" Service="CommonInstanceFactory.Sample.Services.GreetingService" %>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76A4C965-FB06-4C52-9D1E-87789C5EFF70}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonInstanceFactory.Tests.SimpleInjector</RootNamespace>
+    <AssemblyName>CommonInstanceFactory.Tests.SimpleInjector</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=1.4.2.12140, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SimpleInjector.1.4.2.12140\lib\net35\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SimpleInjectorWcfTests.cs" />
+    <Compile Include="SimpleInjectorAdapterTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonInstanceFactory.Adapters.SimpleInjector\CommonInstanceFactory.Adapters.SimpleInjector.csproj">
+      <Project>{D77D3737-C47B-4A14-902F-435767F65B6F}</Project>
+      <Name>CommonInstanceFactory.Adapters.SimpleInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Sample.DependencyResolution.SimpleInjector\CommonInstanceFactory.Sample.DependencyResolution.SimpleInjector.csproj">
+      <Project>{3A03BA8C-9A2A-4721-8612-B91F49114565}</Project>
+      <Name>CommonInstanceFactory.Sample.DependencyResolution.SimpleInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Sample.Services\CommonInstanceFactory.Sample.Services.csproj">
+      <Project>{35FF3850-E551-405E-AF2B-DBD09A68E837}</Project>
+      <Name>CommonInstanceFactory.Sample.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Extensions.Wcf.SimpleInjector\CommonInstanceFactory.Extensions.Wcf.SimpleInjector.csproj">
+      <Project>{638EB8FE-2CA1-48F9-B849-AF213C41A1F9}</Project>
+      <Name>CommonInstanceFactory.Extensions.Wcf.SimpleInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Extensions.Wcf\CommonInstanceFactory.Extensions.Wcf.csproj">
+      <Project>{96F0C5C1-0369-43AA-A568-B0EE9354BE0A}</Project>
+      <Name>CommonInstanceFactory.Extensions.Wcf %28CommonInstanceFactory.Extensions.Wcf\CommonInstanceFactory.Extensions.Wcf%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory\CommonInstanceFactory.csproj">
+      <Project>{8681C040-4A47-4FE5-97B7-E59B9793EA32}</Project>
+      <Name>CommonInstanceFactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A0996F4-76C1-4373-BD28-070263E2A1B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonInstanceFactory.Tests.Ninject</RootNamespace>
+    <AssemblyName>CommonInstanceFactory.Tests.Ninject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.0.15\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NinjectAdapterTests.cs" />
+    <Compile Include="NinjectWcfTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonInstanceFactory.Adapters.Ninject\CommonInstanceFactory.Adapters.Ninject.csproj">
+      <Project>{E39F39F1-D37C-4DB2-A127-728886F95CEF}</Project>
+      <Name>CommonInstanceFactory.Adapters.Ninject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Sample.DependencyResolution.Ninject\CommonInstanceFactory.Sample.DependencyResolution.Ninject.csproj">
+      <Project>{7CAF8B73-B5D9-4B60-9514-37409D91B16C}</Project>
+      <Name>CommonInstanceFactory.Sample.DependencyResolution.Ninject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Sample.Services\CommonInstanceFactory.Sample.Services.csproj">
+      <Project>{35FF3850-E551-405E-AF2B-DBD09A68E837}</Project>
+      <Name>CommonInstanceFactory.Sample.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Extensions.Wcf.Ninject\CommonInstanceFactory.Extensions.Wcf.Ninject.csproj">
+      <Project>{7FC6672D-9E09-41D2-A670-AD2311CE3CE0}</Project>
+      <Name>CommonInstanceFactory.Extensions.Wcf.Ninject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Extensions.Wcf\CommonInstanceFactory.Extensions.Wcf.csproj">
+      <Project>{96F0C5C1-0369-43AA-A568-B0EE9354BE0A}</Project>
+      <Name>CommonInstanceFactory.Extensions.Wcf %28CommonInstanceFactory.Extensions.Wcf\CommonInstanceFactory.Extensions.Wcf%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory\CommonInstanceFactory.csproj">
+      <Project>{8681C040-4A47-4FE5-97B7-E59B9793EA32}</Project>
+      <Name>CommonInstanceFactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
