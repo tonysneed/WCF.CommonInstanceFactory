@@ -28,8 +28,7 @@ namespace CommonInstanceFactory.Tests.SimpleInjector
 		public void SimpleInjectorServiceHost_Should_Use_Soap_GreetingService()
 		{
 			// Arrange
-			ServiceHost serviceHost = new SimpleInjectorServiceHost<GreetingService>
-				(_container, typeof(GreetingService));
+			ServiceHost serviceHost = new SimpleInjectorServiceHost<GreetingService>(_container);
 
 			// Act
 			using (var serviceHelper = new InjectedServiceHelper<IGreetingService>
@@ -71,8 +70,7 @@ namespace CommonInstanceFactory.Tests.SimpleInjector
 		public void SimpleInjectorServiceHost_Should_Use_Rest_GreetingService()
 		{
 			// Arrange
-			ServiceHost serviceHost = new SimpleInjectorServiceHost<GreetingService>
-				(_container, typeof(GreetingService));
+			ServiceHost serviceHost = new SimpleInjectorServiceHost<GreetingService>(_container);
 			using (var serviceHelper = new InjectedServiceHelper<IGreetingService>
 				(serviceHost, ServiceAddress, new WebHttpBinding()))
 			{
