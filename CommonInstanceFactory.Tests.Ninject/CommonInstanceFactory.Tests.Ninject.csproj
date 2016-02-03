@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonInstanceFactory.Adapters.Ninject\CommonInstanceFactory.Adapters.Ninject.csproj">
-      <Project>{E39F39F1-D37C-4DB2-A127-728886F95CEF}</Project>
+      <Project>{e39f39f1-d37c-4db2-a127-728886f95cef}</Project>
       <Name>CommonInstanceFactory.Adapters.Ninject</Name>
     </ProjectReference>
     <ProjectReference Include="..\CommonInstanceFactory.Sample.DependencyResolution.Ninject\CommonInstanceFactory.Sample.DependencyResolution.Ninject.csproj">
@@ -81,7 +81,7 @@
       <Name>CommonInstanceFactory.Extensions.Wcf %28CommonInstanceFactory.Extensions.Wcf\CommonInstanceFactory.Extensions.Wcf%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\CommonInstanceFactory\CommonInstanceFactory.csproj">
-      <Project>{8681C040-4A47-4FE5-97B7-E59B9793EA32}</Project>
+      <Project>{8681c040-4a47-4fe5-97b7-e59b9793ea32}</Project>
       <Name>CommonInstanceFactory</Name>
     </ProjectReference>
   </ItemGroup>

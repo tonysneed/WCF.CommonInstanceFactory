@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\CommonInstanceFactory.Adapters.SimpleInjector.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>cif-key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="SimpleInjector, Version=1.4.2.12140, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -62,6 +68,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="cif-key.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
