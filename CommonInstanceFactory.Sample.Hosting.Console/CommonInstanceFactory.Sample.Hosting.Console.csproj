@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CommonInstanceFactory.Sample.Hosting.Console</RootNamespace>
     <AssemblyName>CommonInstanceFactory.Sample.Hosting.Console</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -37,8 +38,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.0.0.15\lib\net40\Ninject.dll</HintPath>
     </Reference>
@@ -71,6 +76,10 @@
       <Project>{638EB8FE-2CA1-48F9-B849-AF213C41A1F9}</Project>
       <Name>CommonInstanceFactory.Extensions.Wcf.SimpleInjector</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Extensions.Wcf.Unity\CommonInstanceFactory.Extensions.Wcf.Unity.csproj">
+      <Project>{ec3a0371-f346-4893-b53a-1bbb4e72684d}</Project>
+      <Name>CommonInstanceFactory.Extensions.Wcf.Unity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CommonInstanceFactory.Sample.DependencyResolution.Ninject\CommonInstanceFactory.Sample.DependencyResolution.Ninject.csproj">
       <Project>{7CAF8B73-B5D9-4B60-9514-37409D91B16C}</Project>
       <Name>CommonInstanceFactory.Sample.DependencyResolution.Ninject</Name>
@@ -78,6 +87,10 @@
     <ProjectReference Include="..\CommonInstanceFactory.Sample.DependencyResolution.SimpleInjector\CommonInstanceFactory.Sample.DependencyResolution.SimpleInjector.csproj">
       <Project>{3A03BA8C-9A2A-4721-8612-B91F49114565}</Project>
       <Name>CommonInstanceFactory.Sample.DependencyResolution.SimpleInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInstanceFactory.Sample.DependencyResolution.Unity\CommonInstanceFactory.Sample.DependencyResolution.Unity.csproj">
+      <Project>{b91082e8-72ea-42ec-a986-d564faa5c46c}</Project>
+      <Name>CommonInstanceFactory.Sample.DependencyResolution.Unity</Name>
     </ProjectReference>
     <ProjectReference Include="..\CommonInstanceFactory.Sample.Services\CommonInstanceFactory.Sample.Services.csproj">
       <Project>{35FF3850-E551-405E-AF2B-DBD09A68E837}</Project>
