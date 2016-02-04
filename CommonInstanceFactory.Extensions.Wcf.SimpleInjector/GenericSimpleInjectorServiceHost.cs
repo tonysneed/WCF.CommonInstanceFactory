@@ -10,7 +10,12 @@ namespace CommonInstanceFactory.Extensions.Wcf.SimpleInjector
 	public class SimpleInjectorServiceHost<TServiceType> : ServiceHost
 		where TServiceType : class
 	{
-		public SimpleInjectorServiceHost(Container container, Type serviceType, params Uri[] baseAddresses)
+	    public SimpleInjectorServiceHost(Container container, params Uri[] baseAddresses)
+	        : this(container, typeof(TServiceType), baseAddresses)
+	    {
+	    }
+
+	    public SimpleInjectorServiceHost(Container container, Type serviceType, params Uri[] baseAddresses)
 			: base(serviceType, baseAddresses)
 		{
 			// Create instance factory

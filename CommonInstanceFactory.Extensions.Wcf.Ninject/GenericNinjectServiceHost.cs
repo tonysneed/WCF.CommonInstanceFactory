@@ -10,7 +10,12 @@ namespace CommonInstanceFactory.Extensions.Wcf.Ninject
 	public class NinjectServiceHost<TServiceType> : ServiceHost
 		where TServiceType : class
 	{
-		public NinjectServiceHost(IKernel container, Type serviceType, params Uri[] baseAddresses)
+	    public NinjectServiceHost(IKernel container, params Uri[] baseAddresses)
+	        : this(container, typeof(TServiceType), baseAddresses)
+	    {
+	    }
+
+	    public NinjectServiceHost(IKernel container, Type serviceType, params Uri[] baseAddresses)
 			: base(serviceType, baseAddresses)
 		{
 			// Create instance factory

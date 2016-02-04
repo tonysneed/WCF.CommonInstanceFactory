@@ -28,8 +28,7 @@ namespace CommonInstanceFactory.Tests.Ninject
 		public void NinjectServiceHost_Should_Use_Soap_GreetingService()
 		{
 			// Arrange
-			ServiceHost serviceHost = new NinjectServiceHost<GreetingService>
-				(_container, typeof(GreetingService));
+			ServiceHost serviceHost = new NinjectServiceHost<GreetingService>(_container);
 			using (var serviceHelper = new InjectedServiceHelper<IGreetingService>
 				(serviceHost, ServiceAddress, new BasicHttpBinding()))
 			{
@@ -70,8 +69,7 @@ namespace CommonInstanceFactory.Tests.Ninject
 		public void NinjectServiceHost_Should_Use_Rest_GreetingService()
 		{
 			// Arrange
-			ServiceHost serviceHost = new NinjectServiceHost<GreetingService>
-				(_container, typeof(GreetingService));
+			ServiceHost serviceHost = new NinjectServiceHost<GreetingService>(_container);
 			using (var serviceHelper = new InjectedServiceHelper<IGreetingService>
 				(serviceHost, ServiceAddress, new WebHttpBinding()))
 			{
