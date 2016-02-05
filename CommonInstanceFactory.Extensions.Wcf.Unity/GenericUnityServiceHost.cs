@@ -9,12 +9,7 @@ namespace CommonInstanceFactory.Extensions.Wcf.Unity
 		where TServiceType : class
 	{
         public UnityServiceHost(IUnityContainer container, params Uri[] baseAddresses)
-            : this(container, typeof(TServiceType), baseAddresses)
-        {
-        }
-
-        public UnityServiceHost(IUnityContainer container, Type serviceType, params Uri[] baseAddresses)
-            : base(serviceType, baseAddresses)
+            : base(typeof(TServiceType), baseAddresses)
         {
             // Create instance factory
             ICommonInstanceFactory<TServiceType> instanceFactory
